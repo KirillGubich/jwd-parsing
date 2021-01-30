@@ -1,7 +1,7 @@
-package com.epam.jwd.parser.service.impl;
+package com.epam.jwd.parser.handling.impl;
 
-import com.epam.jwd.parser.service.ParseContext;
-import com.epam.jwd.parser.service.TextHandler;
+import com.epam.jwd.parser.handling.ParseContext;
+import com.epam.jwd.parser.handling.TextHandler;
 
 public class TextParseContext implements ParseContext {
 
@@ -18,7 +18,7 @@ public class TextParseContext implements ParseContext {
     }
 
     @Override
-    public TextHandler getParseContext() {
+    public TextHandler getFullTextHandler() {
         ExpressionHandler expressionHandler = ExpressionHandler.getInstance();
         expressionHandler.setNextHandler(WordHandler.getInstance());
         LexemeHandler lexemeHandler = LexemeHandler.getInstance();
@@ -27,7 +27,6 @@ public class TextParseContext implements ParseContext {
         sentenceHandler.setNextHandler(lexemeHandler);
         ParagraphHandler paragraphHandler = ParagraphHandler.getInstance();
         paragraphHandler.setNextHandler(sentenceHandler);
-
         return paragraphHandler;
     }
 }

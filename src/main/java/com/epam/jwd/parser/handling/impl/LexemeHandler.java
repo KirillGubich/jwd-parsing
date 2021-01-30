@@ -1,10 +1,10 @@
-package com.epam.jwd.parser.service.impl;
+package com.epam.jwd.parser.handling.impl;
 
 import com.epam.jwd.parser.composite.TextComponent;
 import com.epam.jwd.parser.factory.impl.TextContainerFactory;
 import com.epam.jwd.parser.model.ComponentType;
 import com.epam.jwd.parser.model.Sentence;
-import com.epam.jwd.parser.service.BaseHandler;
+import com.epam.jwd.parser.handling.BaseHandler;
 
 import java.util.List;
 

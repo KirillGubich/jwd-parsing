@@ -1,4 +1,4 @@
-package com.epam.jwd.parser.service;
+package com.epam.jwd.parser.handling;
 
 import java.util.ArrayList;
 import java.util.List;

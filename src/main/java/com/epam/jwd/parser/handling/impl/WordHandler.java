@@ -1,9 +1,9 @@
-package com.epam.jwd.parser.service.impl;
+package com.epam.jwd.parser.handling.impl;
 
 import com.epam.jwd.parser.composite.TextComponent;
 import com.epam.jwd.parser.factory.impl.TextComponentFactory;
 import com.epam.jwd.parser.model.ComponentType;
-import com.epam.jwd.parser.service.BaseHandler;
+import com.epam.jwd.parser.handling.BaseHandler;
 
 public class WordHandler extends BaseHandler {
 

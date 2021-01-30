@@ -46,6 +46,8 @@ public class Text implements TextComponent {
 
     @Override
     public String buildText() {
-        return null;
+        StringBuilder text = new StringBuilder();
+        components.forEach(child -> text.append(child.buildText()));
+        return text.toString();
     }
 }

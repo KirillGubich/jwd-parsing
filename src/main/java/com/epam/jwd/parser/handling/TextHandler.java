@@ -1,4 +1,4 @@
-package com.epam.jwd.parser.service;
+package com.epam.jwd.parser.handling;
 
 import com.epam.jwd.parser.composite.TextComponent;
 

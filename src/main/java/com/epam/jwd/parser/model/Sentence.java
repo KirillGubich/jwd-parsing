@@ -22,6 +22,10 @@ public class Sentence implements TextComponent {
         components.remove(component);
     }
 
+    public List<TextComponent> getComponents() {
+        return components;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

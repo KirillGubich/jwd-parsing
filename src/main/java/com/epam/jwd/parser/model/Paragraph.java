@@ -13,6 +13,7 @@ public class Paragraph implements TextComponent {
     public Paragraph() {
         this.components = new ArrayList<>();
     }
+
     public void addComponent(TextComponent component) {
         components.add(component);
     }

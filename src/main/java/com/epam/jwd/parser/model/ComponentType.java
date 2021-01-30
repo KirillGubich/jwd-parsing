@@ -5,6 +5,5 @@ public enum ComponentType {
     PARAGRAPH,
     SENTENCE,
     WORD,
-    EXPRESSION,
-    PUNCTUATION_MARK;
+    EXPRESSION;
 }

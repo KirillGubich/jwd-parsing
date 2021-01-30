@@ -1,17 +1,28 @@
 package com.epam.jwd.parser.model;
 
-import com.epam.jwd.parser.composite.TextComponent;
-
-public class Expression implements TextComponent {
-
-    private final String value;
+public class Expression extends Lexeme {
 
     public Expression(String value) {
-        this.value = value;
+        super(value);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
     @Override
     public String buildText() {
-        return " " + value;
+        return " " + getValue();
     }
 }

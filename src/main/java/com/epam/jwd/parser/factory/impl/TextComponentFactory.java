@@ -5,7 +5,6 @@ import com.epam.jwd.parser.exception.UnknownTextComponentException;
 import com.epam.jwd.parser.factory.ComponentFactory;
 import com.epam.jwd.parser.model.ComponentType;
 import com.epam.jwd.parser.model.Expression;
-import com.epam.jwd.parser.model.PunctuationMark;
 import com.epam.jwd.parser.model.Word;
 
 public class TextComponentFactory implements ComponentFactory {
@@ -32,9 +31,6 @@ public class TextComponentFactory implements ComponentFactory {
                 break;
             case EXPRESSION:
                 textComponent = new Expression(value);
-                break;
-            case PUNCTUATION_MARK:
-                textComponent = new PunctuationMark(value);
                 break;
             default:
                 throw new UnknownTextComponentException("Incorrect text component type");
