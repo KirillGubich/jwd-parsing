@@ -19,6 +19,6 @@ public class ReversePolishNotationConverterTest {
     public void transformExpression() {
         String expression = "~6&9|(3&4)";
         String actual = converter.convertExpression(expression);
-        assertEquals("6~9&34&|", actual);
+        assertEquals("6 ~ 9 & 3 4 & | ", actual);
     }
 }

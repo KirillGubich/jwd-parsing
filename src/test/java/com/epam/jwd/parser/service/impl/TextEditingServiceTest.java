@@ -23,10 +23,6 @@ public class TextEditingServiceTest {
     }
 
     @Test
-    public void sortSentencesByWordLength() {
-    }
-
-    @Test
     public void sortSentencesByLexemeLength() {
         String text = "\tSort all words. Try to do it correct.";
         String actual = editingService.sortLexemesByLength(text).buildText();

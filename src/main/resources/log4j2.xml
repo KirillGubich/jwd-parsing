@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration strict="true" name="XMLConfig" packages="com.epam.jwd.core_final">
+<Configuration strict="true" name="XMLConfig" packages="com.epam.jwd.parser">
 
     <Appenders>
         <RollingFile name="RollingFile" fileName="logs/app.log"
@@ -18,9 +18,6 @@
         <root  level="info">
             <AppenderRef ref="RollingFile"/>
         </root>
-        <logger name="com.epam.jwd.core_final.util" level="info">
-            <AppenderRef ref="RollingFile"/>
-        </logger>
     </loggers>
 
 </Configuration>
