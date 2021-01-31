@@ -1,5 +1,7 @@
 package com.epam.jwd.parser.service.impl;
 
+import com.epam.jwd.parser.interpreter.ExpressionContext;
+import com.epam.jwd.parser.interpreter.MathExpression;
 import com.epam.jwd.parser.interpreter.impl.ExpressionCalculateContext;
 import com.epam.jwd.parser.interpreter.impl.NonterminalExpressionNumber;
 import com.epam.jwd.parser.interpreter.impl.TerminalExpressionBitwiseAnd;
@@ -10,8 +12,6 @@ import com.epam.jwd.parser.interpreter.impl.TerminalExpressionBitwiseShiftRight;
 import com.epam.jwd.parser.interpreter.impl.TerminalExpressionBitwiseXor;
 import com.epam.jwd.parser.notation.impl.ReversePolishNotationConverter;
 import com.epam.jwd.parser.service.CalculateService;
-import com.epam.jwd.parser.interpreter.ExpressionContext;
-import com.epam.jwd.parser.interpreter.MathExpression;
 
 import java.util.ArrayList;
 import java.util.Scanner;

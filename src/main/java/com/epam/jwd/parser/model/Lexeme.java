@@ -31,6 +31,6 @@ public abstract class Lexeme implements TextComponent {
 
     @Override
     public String toString() {
-        return  value;
+        return value;
     }
 }

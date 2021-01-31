@@ -7,6 +7,6 @@ public class TerminalExpressionBitwiseNegation implements MathExpression {
 
     @Override
     public void interpret(ExpressionContext context) {
-        context.pushValue(~ context.popValue());
+        context.pushValue(~context.popValue());
     }
 }
