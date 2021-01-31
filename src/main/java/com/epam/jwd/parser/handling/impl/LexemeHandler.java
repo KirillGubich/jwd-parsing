@@ -1,10 +1,11 @@
 package com.epam.jwd.parser.handling.impl;
 
 import com.epam.jwd.parser.composite.TextComponent;
+import com.epam.jwd.parser.exception.UnknownTextComponentException;
 import com.epam.jwd.parser.factory.impl.TextContainerFactory;
+import com.epam.jwd.parser.handling.BaseHandler;
 import com.epam.jwd.parser.model.ComponentType;
 import com.epam.jwd.parser.model.Sentence;
-import com.epam.jwd.parser.handling.BaseHandler;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class LexemeHandler extends BaseHandler {
     }
 
     @Override
-    public TextComponent handle(String textForProcessing) {
+    public TextComponent handle(String textForProcessing) throws UnknownTextComponentException {
         Sentence sentence = (Sentence) TextContainerFactory.getInstance().create(ComponentType.SENTENCE);
         List<String> lexemes = parseText(textForProcessing, LEXEME_REGEXP);
 

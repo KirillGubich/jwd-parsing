@@ -1,5 +1,8 @@
 package com.epam.jwd.parser.model;
 
+import com.epam.jwd.parser.service.CalculateService;
+import com.epam.jwd.parser.service.impl.ExpressionCalculateService;
+
 public class Expression extends Lexeme {
 
     public Expression(String value) {
@@ -23,6 +26,7 @@ public class Expression extends Lexeme {
 
     @Override
     public String buildText() {
-        return " " + getValue();
+        CalculateService calculateService = new ExpressionCalculateService(getValue());
+        return " " + calculateService.calculate();
     }
 }

@@ -2,7 +2,8 @@ package com.epam.jwd.parser.notation.impl;
 
 import com.epam.jwd.parser.notation.ExpressionConverter;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class ReversePolishNotationConverter implements ExpressionConverter {
 
@@ -21,26 +22,26 @@ public class ReversePolishNotationConverter implements ExpressionConverter {
     @Override
     public String convertExpression(String expression) {
         StringBuilder transformedExpression = new StringBuilder();
-        Stack<Character> stack = new Stack<>();
+        Deque<Character> stack = new ArrayDeque<>();
 
         for (int i = 0; i < expression.length(); i++) {
             if (stack.isEmpty() || getRelativePriority(expression.charAt(i)) > getStackPriority(stack.peek())) {
                 stack.push(expression.charAt(i));
             } else if (expression.charAt(i) == ')') {
-                while (stack.peek() != '(') {
-                    transformedExpression.append(stack.pop());
+                while (stack.peek() != null && stack.peek() != '(') {
+                    transformedExpression.append(stack.pop()).append(" ");
                 }
                 stack.pop();
             } else {
                 while (!stack.isEmpty()
                         && getRelativePriority(expression.charAt(i)) <= getStackPriority(stack.peek())) {
-                    transformedExpression.append(stack.pop());
+                    transformedExpression.append(stack.pop()).append(" ");
                 }
                 stack.push(expression.charAt(i));
             }
         }
         while (!stack.isEmpty()) {
-            transformedExpression.append(stack.pop());
+            transformedExpression.append(stack.pop()).append(" ");
         }
         return transformedExpression.toString();
     }
